@@ -50,7 +50,7 @@ div#id1 {
 }
 
 img {
-    animation-name: hggfoto;
+    animation: HGGVRR2;;
     width: 300px;
     height: 200px;
     top: 50px;
@@ -62,7 +62,7 @@ img {
     animation-fill-mode: forwards;
 } 
 
-@keyframes hggfoto {
+@keyframes HGGVRR2 {
     0% { left:50%;top:50%;width:1px;height:1px
         ;}
     25% { left:50%;top:50%;width:50px;height:50px;left:calc(50% - 25px);top:calc(50% - 25px);}

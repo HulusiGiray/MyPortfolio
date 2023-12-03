@@ -1,11 +1,12 @@
 *{
     background-color: mediumpurple;
-    text-align: center;
+    text-align: center
 }
 
 #son::after {
     content:"Copyright©2023 My Portfolio";
     color: black;
+    
 }
 
 #son {
