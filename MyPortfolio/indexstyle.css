@@ -1,16 +1,95 @@
-*{
-    background-color: mediumpurple;
-    text-align: center
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 76vh;
+    background-color:black;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 400px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 80%;
+    border-radius: inherit;
+    transition: 0.7s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.card:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h2,
+.content p {
+    color: white;
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+}
+
+.content p {
+    font-size: 15px;
+    color: white;
+    transform:translateY(50%);
+}/* with the transform:translateY(50%); -> when page open, the photo ise slide in %50 axsis-y */
+.card:hover .content h2 {
+    scale: 1;
+    opacity: 1;
+}
+
+.card:hover .content P {
+    opacity: 1;
 }
 
 #son::after {
-    content:"Copyright©2023 My Portfolio";
-    color: black;
-    
+    content: "Copyright©2023 My Portfolio";
+    color: white;
+
 }
 
 #son {
     position: absolute;
     top: 97%;
-    left:calc(50% - 101px);
+    left: calc(50% - 101px);
 }
